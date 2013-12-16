@@ -1,0 +1,5 @@
+<%= form_tag('/downloadinput') do -%>
+  <div><%= label_tag :htmlcontent, 'insert html code below:' %></div>
+  <div><%= text_area_tag :htmlcontent %></div>
+  <div><%= submit_tag "generate pdf" %></div>
+<% end -%>

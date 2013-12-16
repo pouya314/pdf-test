@@ -2,12 +2,14 @@ PdfTest::Application.routes.draw do
   resources :posts
   
   get 'download' => 'posts#download', as: :download
+  get 'showform' => 'posts#showform', as: :showform
+  post 'downloadinput' => 'posts#download_input', as: :download_input
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'posts#index'
+  root 'posts#showform'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

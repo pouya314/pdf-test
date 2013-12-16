@@ -69,6 +69,16 @@ class PostsController < ApplicationController
     send_data(kit.to_pdf, :filename => 'report.pdf', :type => 'application/pdf', :disposition => 'attachment')
     # redirect_to posts_path
   end
+  
+  def showform
+    
+  end
+  
+  def download_input
+    html = params[:htmlcontent]
+    kit = PDFKit.new(html)
+    send_data(kit.to_pdf, :filename => 'report.pdf', :type => 'application/pdf', :disposition => 'attachment')
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
